@@ -34,6 +34,7 @@ axios.all([checkIn(), status()])
     .then(axios.spread((checkInResult, statusInfo) => {
         let checkInMessage = checkInResult.data.message;
         let leftDays = parseInt(statusInfo.data.data.leftDays);
+        console.log(leftDays, checkInMessage);
         return { checkInMessage, leftDays }
     })).then(data => {
         let { checkInMessage, leftDays } = data;
