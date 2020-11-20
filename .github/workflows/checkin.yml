@@ -16,7 +16,7 @@ jobs:
       - name: install axios
         run: npm install axios
       - name: CheckIn
-        run: node checkin.js 
+        run: node checkin.js
         env:
           SCKEY: ${{ secrets.SCKEY }}
           COOKIE: ${{ secrets.COOKIE }}
