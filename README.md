@@ -17,9 +17,13 @@ COOKIE 账号的cookie
 ![secrets](imgs/secrets.png)
 
 ### 三、启用Action
-点击Action，再点击I understand my workflows, go ahead and enable them
+#### 1. 点击Action，再点击I understand my workflows, go ahead and enable them
 
 ![enableAction](imgs/enableAction.png)
+
+#### 2. 进行PUSH或点击仓库右上角的star
+
+![star](imgs/star.jpg)
 
 ### 四、查看运行结果
 
