@@ -21,10 +21,11 @@ COOKIE 账号的cookie
 
 ![enableAction](imgs/enableAction.png)
 
-### 四、查看运行结果（早上9点30分才会运行）
+### 四、查看运行结果
 
 ![runResult](imgs/runResult.png)
 
+![server](imgs/server.jpg)
 
 # 修改定时
 #### 1. 打开.github/workflows/checkin.yml
