@@ -1,7 +1,8 @@
 # GladosCheckIn
-GLaDOS每日签到
+# GLaDOS每日签到
 
-每天早上9点30分自动签到，使用server酱通过公众号推送结果
+* #### 每天早上9点30分自动签到
+* #### 可用server酱通过公众号推送结果
 
 ## 使用说明
 
@@ -10,9 +11,9 @@ GLaDOS每日签到
 ![fork](imgs/fork.jpg)
 
 ### 二、设置密钥
-SCKEY serve酱的sckey
+* #### SCKEY serve酱的sckey（不需要可以不创建或不设置）
 
-COOKIE 账号的cookie
+* #### COOKIE 账号的cookie
 
 ![secrets](imgs/secrets.png)
 
@@ -21,7 +22,7 @@ COOKIE 账号的cookie
 
 ![enableAction](imgs/enableAction.png)
 
-#### 2. 进行PUSH或点击仓库右上角的star
+#### 2. 进行Push或点击仓库右上角的Star
 
 ![star](imgs/star.jpg)
 
