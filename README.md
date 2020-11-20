@@ -17,7 +17,7 @@
 ![secrets](imgs/secrets.png)
 
 ### 三、启用Action
-#### 1. 点击Action，再点击I understand my workflows, go ahead and enable them
+#### 1. 点击Actions，再点击I understand my workflows, go ahead and enable them
 
 ![enableAction](imgs/enableAction.png)
 
