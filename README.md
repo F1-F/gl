@@ -1,5 +1,4 @@
-# GladosCheckIn
-# GLaDOS每日签到
+# GLaDOS 每日签到
 
 * #### 每天早上9点30分自动签到
 * #### 可用server酱通过公众号推送结果
