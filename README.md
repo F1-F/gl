@@ -31,7 +31,7 @@
 
 ![server](imgs/server.jpg)
 
-# 修改定时
+## 修改定时
 #### 1. 打开.github/workflows/checkin.yml
 #### 2. 修改crontab表达式
 ![modifySchedule](imgs/modifySchedule.png)
