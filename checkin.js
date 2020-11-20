@@ -25,7 +25,7 @@ const server = (checkInMessage, leftDays) => {
         method: 'get',
         url: `https://sc.ftqq.com/${SCKEY}.send`,
         params: {
-            text: `${checkInMessage}，${leftDays}天后到期`
+            text: `${leftDays}天后到期，${checkInMessage}`
         }
     })
 }
