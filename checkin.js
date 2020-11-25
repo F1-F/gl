@@ -3,7 +3,7 @@ const axios = require("axios");
 const SCKEY = process.env.SCKEY;
 axios.defaults.headers.common.cookie = process.env.COOKIE;
 
-const checkIn = () => {
+const checkIn = async () => {
     return axios({
         method: 'post',
         url: 'https://glados.rocks/api/user/checkin',
@@ -13,7 +13,7 @@ const checkIn = () => {
     })
 }
 
-const status = () => {
+const status = async () => {
     return axios({
         method: 'get',
         url: 'https://glados.rocks/api/user/status'
@@ -30,15 +30,13 @@ const server = (checkInMessage, leftDays) => {
     })
 }
 
-axios.all([checkIn(), status()])
-    .then(axios.spread((checkInResult, statusInfo) => {
-        let checkInMessage = checkInResult.data.message;
-        let leftDays = parseInt(statusInfo.data.data.leftDays);
-        console.log(leftDays, checkInMessage);
-        return { checkInMessage, leftDays }
-    })).then(data => {
-        let { checkInMessage, leftDays } = data;
-        if (SCKEY) {
-            server(checkInMessage, leftDays);
-        }
-    });
+const GLaDOSCheckIn = async () => {
+    const checkInMessage = (await checkIn())?.data?.message;
+    const leftDays = parseInt((await status())?.data?.data?.leftDays);
+    console.log(leftDays, checkInMessage);
+    if (SCKEY) {
+        server(checkInMessage, leftDays);
+    }
+}
+
+GLaDOSCheckIn();
