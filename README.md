@@ -3,6 +3,16 @@
 * #### 每天早上9点30分自动签到
 * #### 可用server酱通过公众号推送结果
 
+## GLaDOS
+>GLaDOS为用户提供最快速，稳定和安全的端点，使他们充满信心地访问高速国际互联网、Netflix和隐私。
+
+[GLaDOS项目地址](https://github.com/glados-network/GLaDOS)
+
+[GLaDOS注册教程](https://blog.csdn.net/qq_38523017/article/details/109854128)
+
+## 代码说明
+[Github Actions GLaDOS自动签到](https://blog.csdn.net/qq_38523017/article/details/109855848)
+
 ## 使用说明
 
 ### 一、Fork此仓库
@@ -35,4 +45,6 @@
 #### 1. 打开.github/workflows/checkin.yml
 #### 2. 修改crontab表达式
 ![modifySchedule](imgs/modifySchedule.png)
+
+
 
