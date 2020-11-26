@@ -6,6 +6,8 @@
 ## GLaDOS
 >GLaDOS为用户提供最快速，稳定和安全的端点，使他们充满信心地访问高速国际互联网、Netflix和隐私。
 
+到目前为止，感觉挺不错的，而且它是对教育免费开放的，这一点很良心。
+
 [GLaDOS项目地址](https://github.com/glados-network/GLaDOS)
 
 [GLaDOS注册教程](https://blog.csdn.net/qq_38523017/article/details/109854128)
