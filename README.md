@@ -34,7 +34,7 @@
 
 ![enableAction](imgs/enableAction.png)
 
-#### 2. 点击仓库右上角的Star或修改除imgs文件夹和README.md以外的内容并进行Push
+#### 2. 点击仓库（你自己的）右上角的Star或修改除imgs文件夹和README.md以外的内容并进行Push
 
 ![star](imgs/star.jpg)
 
@@ -49,5 +49,8 @@
 #### 2. 修改crontab表达式
 ![modifySchedule](imgs/modifySchedule.png)
 
+
+## Star
+#### 觉得还不错的话，可以给我点一下Star
 
 
