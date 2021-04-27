@@ -31,7 +31,7 @@
     *  打开GLaDos并登陆，找到右上角“签到”跳转到签到页面
     ![checkinPage](imgs/checkinPage.png)
     *  打开“开发者工具”，通常快捷键为F12，或是点击浏览器选项-更多工具-开发者工具
-    *  点击“network”标签，此时点击签到，会出现“checkin”请求，点击该请求，会出现更多信息，找到“Request Headers”里的“cookie”
+    *  点击“network”标签，此时点击签到，会出现“checkin”请求，点击该请求，会出现更多信息，找到“Request Headers”里的“cookie”，接下来需要用到
     ![devtools](imgs/devtools.png)
     ![cookie](imgs/cookie.png)
 
