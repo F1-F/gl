@@ -23,15 +23,15 @@
 ![sckey](imgs/sckey.png)
 
 * #### 账号的cookie（并非仅此单一获取方式）
-    *  打开GLaDos并登陆，找到右上角“签到”跳转到签到页面
+    * ##### 打开GLaDos并登陆，找到右上角“签到”跳转到签到页面
     
     ![checkinPage](imgs/checkinPage.png)
     
-    *  打开“开发者工具”，通常快捷键为F12，或是点击浏览器选项-更多工具-开发者工具，打开后如图所示点击“network”标签
+    * ##### 打开“开发者工具”，通常快捷键为F12，或是点击浏览器选项-更多工具-开发者工具，打开后如图所示点击“network”标签
    
     ![devtools](imgs/devtools.png)
     
-    *  在签到页面点击签到，相对应的开发者工具network标签下会出现“checkin”请求，点击该请求，会出现更多信息，找到“Request Headers”里的“cookie”，接下来设置密钥时需要用到
+    * ##### 在签到页面点击签到，相对应的开发者工具network标签下会出现“checkin”请求，点击该请求，会出现更多信息，找到“Request Headers”里的“cookie”，接下来设置密钥时需要用到
     
     ![cookie](imgs/cookie.png)
 
