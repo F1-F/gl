@@ -25,15 +25,15 @@
 ### 二、准备工作
 * #### serve酱的sckey（不需要可以跳过）
 
-![sckey](imgs/sckey.jpg)
+![sckey](imgs/sckey.png)
 
 * #### 账号的cookie（并非仅此单一获取方式）
     *  打开GLaDos并登陆，找到右上角“签到”跳转到签到页面
-    ![checkinPage](imgs/checkinPage.jpg)
+    ![checkinPage](imgs/checkinPage.png)
     *  打开“开发者工具”，通常快捷键为F12，或是点击浏览器选项-更多工具-开发者工具
-    ![devtools](imgs/devtools.jpg)
+    ![devtools](imgs/devtools.png)
     *  点击“network”标签，此时点击签到，会出现“checkin”请求，点击该请求，会出现更多信息，找到“Request Headers”里的“cookie”
-    ![cookie](imgs/cookie.jpg)
+    ![cookie](imgs/cookie.png)
 
 ### 三、设置密钥🔑
 * #### SCKEY serve酱的sckey（不需要可以不创建或不设置）
