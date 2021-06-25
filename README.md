@@ -13,7 +13,7 @@
 
 [GLaDOS项目地址](https://github.com/glados-network/GLaDOS)
 
-[GLaDOS注册教程](https://blog.csdn.net/qq_38523017/article/details/109854128)
+[GLaDOS注册教程](https://dullsword.github.io/2020/11/26/GLaDOS-%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/)
 
 ## 代码说明💻
 [Github Actions GLaDOS自动签到](https://blog.csdn.net/qq_38523017/article/details/109855848)
