@@ -48,6 +48,8 @@
 
 * #### COOKIE 账号的cookie（第一步准备工作中所找到的cookie）
 
+###### 注意：密钥名SCKEY和COOKIE，两者的所有字母都是大写
+
 ![secrets](imgs/secrets.png)
 
 ### 四、启用Action🖱
