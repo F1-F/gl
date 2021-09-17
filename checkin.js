@@ -23,9 +23,9 @@ const status = async () => {
 const server = (checkInMessage, leftDays) => {
     return axios({
         method: 'get',
-        url: `https://sc.ftqq.com/${SCKEY}.send`,
+        url: `https://sctapi.ftqq.com/${SCKEY}.send`,
         params: {
-            text: `${leftDays}天后到期，${checkInMessage}`
+            title: `${leftDays}天后到期，${checkInMessage}`
         }
     })
 }
