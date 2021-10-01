@@ -57,7 +57,7 @@
 
 ![enableAction](imgs/enableAction.png)
 
-#### 2. 点击仓库（你自己的）右上角的Star⭐或修改除imgs文件夹和README.md以外的内容并进行Push⬆
+#### 2. 点击仓库（你自己的）右上角的Star⭐
 
 ![star](imgs/star.jpg)
 
