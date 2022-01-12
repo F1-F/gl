@@ -3,7 +3,7 @@
 - 基于 [Github Actions](https://github.com/features/actions)
 - 每天北京时间 **9点30分**（[UTC时间](https://datetime360.com/cn/utc-beijing-time/) 1点30分）进行自动签到
     - 实际上通常会延迟，但不会太久，庆幸的是大多情况下我们并不关心是否准时
-- 可用 [server酱](https://sc.ftqq.com/) 通过公众号推送结果
+- 可用 [Server酱](https://sc.ftqq.com/) 通过公众号推送结果
   
   ![server](imgs/server.jpg)
 
@@ -27,7 +27,7 @@
 
 ### 一、准备工作📝
 
-- serve酱的 sckey（不需要可以跳过）
+- Serve酱的 SCKEY（不需要可以跳过）
 
 ![sckey](imgs/sckey.png)
 
@@ -78,8 +78,8 @@
 
 ## 修改定时🕤
 
-1. 打开 .github/workflows/checkin.yml
-2. 修改 crontab 表达式
+1. 打开 [.github/workflows/checkin.yml](https://github.com/DullSword/GLaDOS-CheckIn/blob/main/.github/workflows/checkin.yml)
+2. 修改 [crontab](https://zh.wikipedia.org/wiki/Cron) 表达式
 
 ![modifySchedule](imgs/modifySchedule.png)
 
