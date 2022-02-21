@@ -78,7 +78,10 @@
 
 ## 修改定时🕤
 
-1. 打开 [.github/workflows/checkin.yml](https://github.com/DullSword/GLaDOS-CheckIn/blob/main/.github/workflows/checkin.yml)
+1. 打开 .github/workflows/checkin.yml
+
+![ymlpath](imgs/ymlpath.png)
+
 2. 修改 [crontab](https://zh.wikipedia.org/wiki/Cron) 表达式
 
 ![modifySchedule](imgs/modifySchedule.png)
