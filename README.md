@@ -34,7 +34,7 @@
 - 账号的 cookie（并非仅此单一获取方式）
     1. 打开 GLaDos 并登陆，找到右上角 "签到" 跳转到签到页面
     
-    ![checkinPage](imgs/checkinPage.png)
+    ![checkin_page](imgs/checkin_page.png)
     
     2. 打开 "开发者工具"，通常快捷键为 F12，或是点击 浏览器选项 > 更多工具 > 开发者工具，打开后如图所示点击 "network" 标签
    
@@ -64,7 +64,7 @@
 
 1. 点击 Actions，再点击 "I understand my workflows, go ahead and enable them"
 
-![enableAction](imgs/enableAction.png)
+![enable_actions](imgs/enable_actions.png)
 
 2. 点击仓库（你自己的）右上角的Star⭐
 
@@ -72,7 +72,7 @@
 
 ### 五、查看运行结果🔎
 
-![runResult](imgs/runResult.png)
+![run_result](imgs/run_result.png)
 
 ![server](imgs/server.jpg)
 
@@ -80,11 +80,11 @@
 
 1. 打开 .github/workflows/checkin.yml
 
-![ymlpath](imgs/ymlpath.png)
+![workflowpath](imgs/workflowpath.png)
 
 2. 修改 [crontab](https://zh.wikipedia.org/wiki/Cron) 表达式
 
-![modifySchedule](imgs/modifySchedule.png)
+![modify_schedule](imgs/modify_schedule.png)
 
 
 ## Star⭐
