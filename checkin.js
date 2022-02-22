@@ -47,7 +47,7 @@ const push = (infos) => {
         desp += `${email}：${leftDays}，${checkInMessage}\n`;
     }
 
-    return axios({
+    axios({
         method: 'post',
         url: `https://sctapi.ftqq.com/${SCKEY}.send`,
         data: {
