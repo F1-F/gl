@@ -32,6 +32,7 @@ const push = (checkInMessage, email, leftDays) => {
 
 const executeCheckIn = async () => {
     const cookies = process.env.COOKIES;
+    console.log(cookies);
     console.log(typeof cookies);
     // const result = [];
 
