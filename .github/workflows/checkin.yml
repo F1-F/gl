@@ -26,3 +26,4 @@ jobs:
         env:
           SCKEY: ${{ secrets.SCKEY }}
           COOKIE: ${{ secrets.COOKIE }}
+          COOKIES: ${{ secrets.COOKIES }}
