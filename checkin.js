@@ -45,7 +45,7 @@ const push = (infos) => {
     for (const info of infos) {
         const { checkInMessage, email, leftDays } = info;
 
-        desp += `${email}：${leftDays}，${checkInMessage}\n`;
+        desp += `${email}：${leftDays}天，${checkInMessage}\n`;
     }
 
     axios({
@@ -55,11 +55,9 @@ const push = (infos) => {
             'content-type': 'application/x-www-form-urlencoded'
         },
         data: qs.stringify({
-            title: `${infos?.[0].email}：${infos?.[0].leftDays}，${infos?.[0].checkInMessage}`,
+            title: `${infos?.[0].email}：${infos?.[0].leftDays}天，${infos?.[0].checkInMessage}`,
             desp
         })
-    }).catch(error => {
-        console.log(error);
     });
 };
 
