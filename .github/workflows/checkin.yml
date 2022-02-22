@@ -21,6 +21,8 @@ jobs:
           node-version: '14.x'
       - name: install axios
         run: npm install axios
+      - name: install qs
+        run: npm install qs
       - name: CheckIn
         run: node checkin.js
         env:
