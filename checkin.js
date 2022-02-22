@@ -12,7 +12,7 @@ const checkIn = async (cookie) => {
         data: {
             token: "glados_network"
         }
-    })
+    });
 };
 
 const getStatus = async (cookie) => {
@@ -22,7 +22,7 @@ const getStatus = async (cookie) => {
         headers: {
             'Cookie': cookie
         }
-    })
+    });
 };
 
 const checkInAndGetStatus = async (cookie) => {
@@ -47,8 +47,6 @@ const push = (infos) => {
         desp += `${email}：${leftDays}，${checkInMessage}\n`;
     }
 
-    console.log(desp);
-
     axios({
         method: 'post',
         url: `https://sctapi.ftqq.com/${SCKEY}.send`,
@@ -56,7 +54,9 @@ const push = (infos) => {
             title: `${infos?.[0].email}：${infos?.[0].leftDays}，${infos?.[0].checkInMessage}`,
             desp
         }
-    })
+    }).catch(error => {
+        console.log(error);
+    });
 };
 
 const GLaDOSCheckIn = async () => {
