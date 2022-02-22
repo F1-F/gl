@@ -1,4 +1,5 @@
-const axios = require("axios");
+const axios = require('axios');
+const qs = require('qs');
 
 const SCKEY = process.env.SCKEY;
 
@@ -50,10 +51,13 @@ const push = (infos) => {
     axios({
         method: 'post',
         url: `https://sctapi.ftqq.com/${SCKEY}.send`,
-        data: {
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded'
+        },
+        data: qs.stringify({
             title: `${infos?.[0].email}：${infos?.[0].leftDays}，${infos?.[0].checkInMessage}`,
             desp
-        }
+        })
     }).catch(error => {
         console.log(error);
     });
