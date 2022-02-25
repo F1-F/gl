@@ -42,7 +42,7 @@ const pushplus = (token, infos) => {
 
     const data = {
         token,
-        title: `账号：${infos?.[0]['账号']}`.padEnd(32, ' ') + `天数：${infos?.[0]['天数']}`.padEnd(32, ' ') + `签到情况：${infos?.[0]['签到情况']}`,
+        title: `账号：${infos?.[0]['账号']}`.padEnd(35, ' ') + `天数：${infos?.[0]['天数']}`.padEnd(35, ' ') + `签到情况：${infos?.[0]['签到情况']}`,
         content: JSON.stringify(infos),
         template: 'json'
     };
