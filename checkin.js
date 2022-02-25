@@ -40,20 +40,14 @@ const checkInAndGetStatus = async (cookie) => {
 const pushplus = (token, infos) => {
     if (infos.length === 0) return;
 
-    let content = '';
-    for (const info of infos) {
-        const { checkInMessage, email, leftDays } = info;
-
-        content += `${email}：${leftDays}天后到期，${checkInMessage}<br/><br/>`;
-    }
-
     axios({
         method: 'post',
         url: `http://www.pushplus.plus/send`,
         data: {
             token,
             title: `${infos?.[0].email}：${infos?.[0].leftDays}天后到期，${infos?.[0].checkInMessage}`,
-            content
+            content: JSON.stringify(infos),
+            template: 'json'
         }
     });
 };
