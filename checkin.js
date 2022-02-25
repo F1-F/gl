@@ -31,9 +31,9 @@ const checkInAndGetStatus = async (cookie) => {
     const leftDays = parseInt(userStatus?.leftDays);
 
     return {
-        checkInMessage,
-        email,
-        leftDays
+        '账号': email,
+        '天数': leftDays,
+        '签到情况': checkInMessage
     };
 };
 
@@ -45,7 +45,7 @@ const pushplus = (token, infos) => {
         url: `http://www.pushplus.plus/send`,
         data: {
             token,
-            title: `${infos?.[0].email}：${infos?.[0].leftDays}天后到期，${infos?.[0].checkInMessage}`,
+            title: `账号：${infos?.[0].email}\n天数：${infos?.[0].leftDays}\n签到情况：${infos?.[0].checkInMessage}`,
             content: JSON.stringify(infos),
             template: 'json'
         }
