@@ -1,7 +1,4 @@
 const axios = require('axios');
-const qs = require('qs');
-
-const SCKEY = process.env.SCKEY;
 
 const checkIn = async (cookie) => {
     return axios({
@@ -40,24 +37,24 @@ const checkInAndGetStatus = async (cookie) => {
     };
 };
 
-const push = (infos) => {
-    let desp = '';
+const pushplus = (token, infos) => {
+    if (infos.length === 0) return;
+
+    let content = '';
     for (const info of infos) {
         const { checkInMessage, email, leftDays } = info;
 
-        desp += `${email}：${leftDays}天，${checkInMessage}\n`;
+        content += `${email}：${leftDays}天后到期，${checkInMessage}<br/>`;
     }
 
     axios({
         method: 'post',
-        url: `https://sctapi.ftqq.com/${SCKEY}.send`,
-        headers: {
-            'content-type': 'application/x-www-form-urlencoded'
-        },
-        data: qs.stringify({
-            title: `${infos?.[0].email}：${infos?.[0].leftDays}天，${infos?.[0].checkInMessage}`,
-            desp
-        })
+        url: `http://www.pushplus.plus/send`,
+        data: {
+            token,
+            title: `${infos?.[0].email}：${infos?.[0].leftDays}天后到期，${infos?.[0].checkInMessage}`,
+            content
+        }
     });
 };
 
@@ -67,8 +64,10 @@ const GLaDOSCheckIn = async () => {
     const results = await Promise.all(cookies.map(async cookie => await checkInAndGetStatus(cookie)));
     console.log(results);
 
-    if (SCKEY) {
-        push(results);
+    const PUSHPLUS = process.env.PUSHPLUS;
+
+    if (PUSHPLUS) {
+        pushplus(PUSHPLUS, results);
     }
 };
 
