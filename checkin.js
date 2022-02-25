@@ -44,7 +44,7 @@ const pushplus = (token, infos) => {
     for (const info of infos) {
         const { checkInMessage, email, leftDays } = info;
 
-        content += `${email}：${leftDays}天后到期，${checkInMessage}<br/>`;
+        content += `${email}：${leftDays}天后到期，${checkInMessage}<br/><br/>`;
     }
 
     axios({
