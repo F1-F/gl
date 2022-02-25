@@ -45,7 +45,7 @@ const pushplus = (token, infos) => {
         url: `http://www.pushplus.plus/send`,
         data: {
             token,
-            title: `账号：${infos?.[0].email}\n天数：${infos?.[0].leftDays}\n签到情况：${infos?.[0].checkInMessage}`,
+            title: `账号：${infos?.[0].email}`.padEnd(32, ' ') + `天数：${infos?.[0].leftDays}`.padEnd(32, ' ') + `签到情况：${infos?.[0].checkInMessage}`,
             content: JSON.stringify(infos),
             template: 'json'
         }
