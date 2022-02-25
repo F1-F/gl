@@ -40,15 +40,18 @@ const checkInAndGetStatus = async (cookie) => {
 const pushplus = (token, infos) => {
     if (infos.length === 0) return;
 
+    const data = {
+        token,
+        title: `账号：${infos?.[0].email}`.padEnd(32, ' ') + `天数：${infos?.[0].leftDays}`.padEnd(32, ' ') + `签到情况：${infos?.[0].checkInMessage}`,
+        content: JSON.stringify(infos),
+        template: 'json'
+    };
+    console.log(data);
+
     axios({
         method: 'post',
         url: `http://www.pushplus.plus/send`,
-        data: {
-            token,
-            title: `账号：${infos?.[0].email}`.padEnd(32, ' ') + `天数：${infos?.[0].leftDays}`.padEnd(32, ' ') + `签到情况：${infos?.[0].checkInMessage}`,
-            content: JSON.stringify(infos),
-            template: 'json'
-        }
+        data
     });
 };
 
