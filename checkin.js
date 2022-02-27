@@ -38,8 +38,6 @@ const checkInAndGetStatus = async (cookie) => {
 };
 
 const pushplus = (token, infos) => {
-    if (infos.length === 0) return;
-
     const data = {
         token,
         title: `账号：${infos?.[0]['账号']}`.padEnd(32, ' ') + `天数：${infos?.[0]['天数']}`.padEnd(10, ' ') + `签到情况：${infos?.[0]['签到情况']}`,
@@ -48,7 +46,7 @@ const pushplus = (token, infos) => {
     };
     console.log(data);
 
-    axios({
+    return axios({
         method: 'post',
         url: `http://www.pushplus.plus/send`,
         data
@@ -56,15 +54,20 @@ const pushplus = (token, infos) => {
 };
 
 const GLaDOSCheckIn = async () => {
-    const cookies = process.env.COOKIES?.split(",") ?? [];
+    try {
+        const cookies = process.env.COOKIES?.split(",") ?? [];
 
-    const results = await Promise.all(cookies.map(async cookie => await checkInAndGetStatus(cookie)));
-    console.log(results);
+        const infos = await Promise.all(cookies.map(async cookie => await checkInAndGetStatus(cookie)));
+        console.log(infos);
 
-    const PUSHPLUS = process.env.PUSHPLUS;
+        const PUSHPLUS = process.env.PUSHPLUS;
 
-    if (PUSHPLUS) {
-        pushplus(PUSHPLUS, results);
+        if (PUSHPLUS && infos.length) {
+            const pushResult = (await pushplus(PUSHPLUS, infos))?.data?.msg;
+            console.log(pushResult);
+        }
+    } catch (error) {
+        console.log(error);
     }
 };
 
