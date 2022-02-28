@@ -38,9 +38,20 @@ const checkInAndGetStatus = async (cookie) => {
 };
 
 const pushplus = (token, infos) => {
+    const titleEmail = infos?.[0]['账号'];
+    const titleLeftDays = infos?.[0]['天数'];
+    const titleCheckInMessage = infos?.[0]['签到情况'];
+    const titleSpace = 4;
+
+    const title = (
+        '账号: ' + `${titleEmail}`.padEnd(titleEmail.length + titleSpace) +
+        '天数: ' + `${titleLeftDays}`.padEnd(titleLeftDays.toString().length + titleSpace) +
+        '签到情况: ' + `${titleCheckInMessage}`
+    ).slice(0, 100);
+
     const data = {
         token,
-        title: `账号：${infos?.[0]['账号']}`.padEnd(32, ' ') + `天数：${infos?.[0]['天数']}`.padEnd(10, ' ') + `签到情况：${infos?.[0]['签到情况']}`,
+        title,
         content: JSON.stringify(infos),
         template: 'json'
     };
