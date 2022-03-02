@@ -66,7 +66,7 @@ const pushplus = (token, infos) => {
 
 const GLaDOSCheckIn = async () => {
     try {
-        const cookies = process.env.COOKIES?.split(",") ?? [];
+        const cookies = process.env.COOKIES?.split('&&') ?? [];
 
         const infos = await Promise.all(cookies.map(async cookie => await checkInAndGetStatus(cookie)));
         console.log(infos);
