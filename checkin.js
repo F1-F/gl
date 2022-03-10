@@ -1,42 +1,85 @@
-const axios = require("axios");
+const axios = require('axios');
 
-const SCKEY = process.env.SCKEY;
-axios.defaults.headers.common.cookie = process.env.COOKIE;
-
-const checkIn = async () => {
+const checkIn = async (cookie) => {
     return axios({
         method: 'post',
         url: 'https://glados.rocks/api/user/checkin',
+        headers: {
+            'Cookie': cookie
+        },
         data: {
             token: "glados_network"
         }
-    })
-}
+    });
+};
 
-const status = async () => {
+const getStatus = async (cookie) => {
     return axios({
         method: 'get',
-        url: 'https://glados.rocks/api/user/status'
-    })
-}
-
-const server = (checkInMessage, leftDays) => {
-    return axios({
-        method: 'get',
-        url: `https://sctapi.ftqq.com/${SCKEY}.send`,
-        params: {
-            title: `${leftDays}天后到期，${checkInMessage}`
+        url: 'https://glados.rocks/api/user/status',
+        headers: {
+            'Cookie': cookie
         }
-    })
-}
+    });
+};
+
+const checkInAndGetStatus = async (cookie) => {
+    const checkInMessage = (await checkIn(cookie))?.data?.message;
+
+    const userStatus = (await getStatus(cookie))?.data?.data;
+    const email = userStatus?.email;
+    const leftDays = parseInt(userStatus?.leftDays);
+
+    return {
+        '账号': email,
+        '天数': leftDays,
+        '签到情况': checkInMessage
+    };
+};
+
+const pushplus = (token, infos) => {
+    const titleEmail = infos?.[0]['账号'];
+    const titleLeftDays = infos?.[0]['天数'];
+    const titleCheckInMessage = infos?.[0]['签到情况'];
+    const titleSpace = 4;
+
+    const title = (
+        '账号: ' + `${titleEmail}`.padEnd(titleEmail.length + titleSpace) +
+        '天数: ' + `${titleLeftDays}`.padEnd(titleLeftDays.toString().length + titleSpace) +
+        '签到情况: ' + `${titleCheckInMessage}`
+    ).slice(0, 100);
+
+    const data = {
+        token,
+        title,
+        content: JSON.stringify(infos),
+        template: 'json'
+    };
+    console.log(data);
+
+    return axios({
+        method: 'post',
+        url: `http://www.pushplus.plus/send`,
+        data
+    });
+};
 
 const GLaDOSCheckIn = async () => {
-    const checkInMessage = (await checkIn())?.data?.message;
-    const leftDays = parseInt((await status())?.data?.data?.leftDays);
-    console.log(leftDays, checkInMessage);
-    if (SCKEY) {
-        server(checkInMessage, leftDays);
+    try {
+        const cookies = process.env.COOKIES?.split('&&') ?? [];
+
+        const infos = await Promise.all(cookies.map(async cookie => await checkInAndGetStatus(cookie)));
+        console.log(infos);
+
+        const PUSHPLUS = process.env.PUSHPLUS;
+
+        if (PUSHPLUS && infos.length) {
+            const pushResult = (await pushplus(PUSHPLUS, infos))?.data?.msg;
+            console.log(pushResult);
+        }
+    } catch (error) {
+        console.log(error);
     }
-}
+};
 
 GLaDOSCheckIn();
