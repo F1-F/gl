@@ -7,6 +7,8 @@
 
   ![push](imgs/push.png)
 
+  ![push_detail](imgs/push_detail.png)
+
 - [Discuss on GitHub](https://github.com/DullSword/GLaDOS-CheckIn/discussions)
 
 ## GLaDOS
@@ -93,6 +95,8 @@
 ![run_result](imgs/run_result.png)
 
 ![push](imgs/push.png)
+
+![push_detail](imgs/push_detail.png)
 
 ## 修改定时🕤
 
