@@ -47,7 +47,7 @@
 
      ![cookie](imgs/cookie.png)
 
-- pushplus的 token（不需要可以跳过）
+- pushplus的 token（不需要推送功能，可以跳过）
 
   ![pushplus](imgs/pushplus.png)
 
@@ -72,7 +72,7 @@
 
     ![multi_account](imgs/secrets_multi_account.png)
 
-- PUSHPLUS：pushplus的 token（不需要可以不创建）
+- PUSHPLUS：pushplus的 token（不需要推送功能，可以不创建）
 
   ![secrets_pushplus](imgs/secrets_pushplus.png)
 
@@ -115,6 +115,9 @@
 #### 新增
 
 - 多账号签到
+  - 之前fork了旧版本，未改动的话，只要选择 Fetch upstream 并点击 Fetch and merge 同步新版本即可
+
+    ![fetch_upstream](imgs/fetch_upstream.png)
 
 #### 变更
 
