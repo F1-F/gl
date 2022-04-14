@@ -49,7 +49,7 @@
 
      ![cookie](imgs/cookie.png)
 
-- pushplus 的 token（不需要推送功能，可以跳过）
+- [pushplus](https://www.pushplus.plus/) 的 token（不需要推送功能，可以跳过）
 
   ![pushplus](imgs/pushplus.png)
 
@@ -74,7 +74,7 @@
 
     ![multi_account](imgs/secrets_multi_account.png)
 
-- `PUSHPLUS`：pushplus 的 token（不需要推送功能，可以不创建）
+- `PUSHPLUS`：[pushplus](https://www.pushplus.plus/) 的 token（不需要推送功能，可以不创建）
 
   ![secrets_pushplus](imgs/secrets_pushplus.png)
 
