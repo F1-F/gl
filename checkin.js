@@ -8,7 +8,7 @@ const checkIn = async (cookie) => {
             'Cookie': cookie
         },
         data: {
-            token: "glados_network"
+            token: "glados.network"
         }
     });
 };
