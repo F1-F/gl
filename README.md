@@ -112,6 +112,15 @@
 
 ## 更新日志
 
+### [2.0.1] - 2022-05-10
+
+#### 变更
+
+- GLaDOS checkin 接口 request payload 中的 token 由 "glados_network" 更改为 "glados.network"
+  - 同步对应分支的最新版本或手动进行修改
+  - [#18](https://github.com/DullSword/GLaDOS-CheckIn/pull/18)
+  - [#19](https://github.com/DullSword/GLaDOS-CheckIn/issues/19)
+
 ### [2.0.0] - 2022-03-10
 
 主分支更新为新版本，旧版本归入v1分支
