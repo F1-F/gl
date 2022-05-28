@@ -26,3 +26,5 @@ jobs:
         env:
           PUSHPLUS: ${{ secrets.PUSHPLUS }}
           COOKIES: ${{ secrets.COOKIES }}
+      - name: keep alive
+        uses: gautamkrishnar/keepalive-workflow@master # using the workflow with default settings
