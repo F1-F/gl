@@ -17,3 +17,10 @@ body:
         - 提问前请确保你在 [更新日志](https://github.com/DullSword/GLaDOS-CheckIn/blob/main/README.md#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97) 中搜索过
 
         最后，在开 issue 前，可以先搜索一下以往的旧 issue - 你遇到的问题可能已经有人提了，也可能已经在最新版本中被修正。注意：如果你发现一个已经关闭的旧 issue 在最新版本中仍然存在，请不要在旧 issue 下面留言，而应该开一个新的 issue。
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题
+      description: 对问题的清晰描述。
+    validations:
+      required: true
