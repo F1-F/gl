@@ -55,7 +55,7 @@ const pushplus = (token, infos) => {
         content: JSON.stringify(infos),
         template: 'json'
     };
-    console.log(data);
+    // console.log(data);
 
     return axios({
         method: 'post',
@@ -69,16 +69,16 @@ const GLaDOSCheckIn = async () => {
         const cookies = process.env.COOKIES?.split('&&') ?? [];
 
         const infos = await Promise.all(cookies.map(async cookie => await checkInAndGetStatus(cookie)));
-        console.log(infos);
+        // console.log(infos);
 
         const PUSHPLUS = process.env.PUSHPLUS;
 
         if (PUSHPLUS && infos.length) {
             const pushResult = (await pushplus(PUSHPLUS, infos))?.data?.msg;
-            console.log(pushResult);
+            // console.log(pushResult);
         }
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
 
