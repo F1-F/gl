@@ -1,6 +1,6 @@
 # GLaDOS 每日签到💮
 
-**GLaDOS 使用了 CloudFlare，目前该项目无法正常签到。最近比较忙，可能没时间改动，有需要可以查看 [#34](https://github.com/DullSword/GLaDOS-CheckIn/issues/34) 的解决方案。**
+**GLaDOS 使用了 CloudFlare，目前该项目无法正常签到，正在施工。有需要可以查看 [#34](https://github.com/DullSword/GLaDOS-CheckIn/issues/34) 的解决方案。**
 
 - 基于 [Github Actions](https://github.com/features/actions)
 - 每天北京时间 **9点30分**（[UTC时间](https://datetime360.com/cn/utc-beijing-time/) 1点30分）进行自动签到
