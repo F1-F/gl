@@ -119,6 +119,7 @@
 #### 变更
 
 - 绕过 CloudFlare
+  - [#41](https://github.com/DullSword/GLaDOS-CheckIn/pull/41)
   - [#34](https://github.com/DullSword/GLaDOS-CheckIn/issues/34)
 
 ### [2.0.1] - 2022-05-10
