@@ -28,6 +28,8 @@ jobs:
         env:
           PUSHPLUS: ${{ secrets.PUSHPLUS }}
           COOKIES: ${{ secrets.COOKIES }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
       - name: keep alive
         uses: gautamkrishnar/keepalive-workflow@master # using the workflow with default settings
       - name: Delete workflow runs
